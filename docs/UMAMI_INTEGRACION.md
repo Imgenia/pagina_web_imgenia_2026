@@ -59,13 +59,38 @@ VITE_UMAMI_WEBSITE_ID=9ac65e6b-926d-46bd-bc02-f2d149448605
 
 No subas `.env.local` a Git (debe estar en `.gitignore`).
 
-## 3. Resumen de comprobaciones
+## 3. Cómo comprobar que Umami está funcionando
+
+### A) Servidor Umami (lo que ves en el terminal)
+
+- **✓** Si en el log aparece `✓ Database connection successful` y `✓ Ready in ...ms`, Umami está corriendo.
+- Si al arrancar sale *"Can't reach database server"* y luego al reintentar sí conecta, suele ser que la base de datos tarda un poco en estar lista. En ese caso conviene que el servicio `umami-db` arranque antes que `umami` (en EasyPanel puedes definir dependencias entre servicios si está disponible).
+
+### B) Panel de Umami
+
+1. Abre **https://web-imgenia-umami.i7rmns.easypanel.host** en el navegador.
+2. Inicia sesión (si es la primera vez, crea el usuario admin según la documentación de la imagen Umami).
+3. Comprueba que ves el dashboard y que el sitio con ID `9ac65e6b-926d-46bd-bc02-f2d149448605` está creado.
+
+### C) Que la web envíe datos (imgenia.es)
+
+1. **Redespliega la web** después de guardar `VITE_UMAMI_URL` y `VITE_UMAMI_WEBSITE_ID` en EasyPanel. Las variables `VITE_*` se embeben en el **build**; si no redespliegas, la web antigua no llevará el script.
+2. Abre **https://imgenia.es** en una pestaña (mejor en modo incógnito o sin extensiones que bloqueen).
+3. Abre las **DevTools** (F12) → pestaña **Red / Network**. Recarga la página.
+4. Filtra por "umami" o "script.js". Deberías ver una petición a `https://web-imgenia-umami.i7rmns.easypanel.host/script.js` y, al navegar, peticiones al endpoint de recogida de Umami (por ejemplo `/api/send` o similar). Si aparecen, el script se está cargando y enviando datos.
+5. Vuelve al **panel de Umami**, espera 1–2 minutos y refresca. Deberían aparecer visitas y páginas para imgenia.es.
+
+Si no ves peticiones a Umami en la pestaña Red, la web se desplegó sin las variables o con valores incorrectos: revisa que las env estén en el **servicio que construye la web** y vuelve a desplegar.
+
+## 4. Resumen de comprobaciones
 
 - [ ] Umami desplegado y accesible en su URL.
 - [ ] Base de datos PostgreSQL (`umami-db`) con `DATABASE_URL` y `HASH_SALT` configurados en el servicio Umami.
 - [ ] Sitio creado en Umami y **Website ID** copiado.
-- [ ] Variables `VITE_UMAMI_URL` y `VITE_UMAMI_WEBSITE_ID` configuradas en el **build** de la web (EasyPanel o `.env.local`).
-- [ ] Tras redesplegar la web, visitar imgenia.es y comprobar en el panel de Umami que aparecen visitas y páginas.
+- [ ] Variables `VITE_UMAMI_URL` y `VITE_UMAMI_WEBSITE_ID` configuradas en el **build** de la web (EasyPanel).
+- [ ] **Redespliegue de la web** después de añadir las variables.
+- [ ] En imgenia.es, pestaña Red: peticiones a `web-imgenia-umami.../script.js` y al API de Umami.
+- [ ] En el panel de Umami, visitas y páginas de imgenia.es a los 1–2 minutos.
 
 ## 4. Privacidad y cookies
 
