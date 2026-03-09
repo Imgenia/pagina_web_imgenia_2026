@@ -20,7 +20,7 @@ const fundadores = [
     rol: 'CTO y Fundador',
     frase: 'La confianza se construye con cada línea de código.',
     linkedin: 'https://linkedin.com/in/angel-gomez-calcerrada',
-    foto: '/angel.jpeg',
+    foto: '/angel.png',
   },
   {
     nombre: 'Julio Gil',
