@@ -42,17 +42,16 @@ export default function Premios() {
             <img
               src="/Logo-Aseyacovi-textos.png"
               alt="ASEYACOVI"
-              className="h-10 sm:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              className="h-24 sm:h-28 md:h-32 lg:h-36 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
               style={{ mixBlendMode: 'screen' }}
             />
-            <div className="h-6 sm:h-8 w-px bg-gray-600" />
-            <div className="bg-white rounded-lg sm:rounded-xl px-3 py-1.5 sm:px-4 sm:py-2 shadow-md">
-              <img
-                src="/colmenar.png"
-                alt="Ayuntamiento de Colmenar Viejo"
-                className="h-8 sm:h-10 w-auto object-contain"
-              />
-            </div>
+            <div className="h-8 sm:h-10 w-px bg-gray-600" />
+            <img
+              src="/colmenar.png"
+              alt="Ayuntamiento de Colmenar Viejo"
+              className="h-14 sm:h-18 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              style={{ mixBlendMode: 'screen' }}
+            />
           </div>
           <div className="hidden sm:block h-px w-12 bg-gray-700" />
         </div>
