@@ -34,23 +34,23 @@ export default function Proceso() {
       background="white"
     >
       <div className="max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {pasos.map((paso) => {
             const Icon = paso.icon;
             return (
               <div key={paso.numero} className="relative">
-                <div className="bg-gradient-to-br from-imgenia-blue/5 to-imgenia-pink/5 rounded-2xl p-8 border border-gray-200 h-full">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-imgenia-pink to-imgenia-blue rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                <div className="bg-gradient-to-br from-imgenia-blue/5 to-imgenia-pink/5 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-gray-200 h-full">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-imgenia-pink to-imgenia-blue rounded-lg sm:rounded-xl flex items-center justify-center text-white font-bold text-lg sm:text-xl flex-shrink-0">
                       {paso.numero}
                     </div>
-                    <Icon className="w-8 h-8 text-imgenia-blue" />
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-imgenia-blue flex-shrink-0" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{paso.titulo}</h3>
-                  <p className="text-gray-600 mb-4">{paso.descripcion}</p>
-                  <div className="space-y-2">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">{paso.titulo}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">{paso.descripcion}</p>
+                  <div className="space-y-1.5 sm:space-y-2">
                     {paso.entregables.map((entregable) => (
-                      <div key={entregable} className="flex items-start gap-2 text-sm text-gray-700">
+                      <div key={entregable} className="flex items-start gap-2 text-xs sm:text-sm text-gray-700">
                         <span className="text-green-500 mt-0.5">✓</span>
                         <span>{entregable}</span>
                       </div>

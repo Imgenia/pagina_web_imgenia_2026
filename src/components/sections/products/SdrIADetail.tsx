@@ -136,23 +136,23 @@ export default function SdrIADetail() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-br from-imgenia-pink/5 via-white to-imgenia-blue/5 py-20 pt-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-imgenia-blue hover:text-imgenia-navy mb-8 transition-colors">
-            <ArrowLeft className="w-5 h-5" />
+      <div className="bg-gradient-to-br from-imgenia-pink/5 via-white to-imgenia-blue/5 py-10 sm:py-14 md:py-20 pt-24 sm:pt-28 md:pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <Link to="/" className="inline-flex items-center gap-2 text-imgenia-blue hover:text-imgenia-navy mb-6 sm:mb-8 transition-colors text-sm sm:text-base min-h-[44px] items-center">
+            <ArrowLeft className="w-5 h-5 flex-shrink-0" />
             <span className="font-medium">Volver al inicio</span>
           </Link>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block px-4 py-2 bg-imgenia-pink/10 text-imgenia-pink font-semibold text-sm rounded-full mb-4">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+            <div className="min-w-0">
+              <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-imgenia-pink/10 text-imgenia-pink font-semibold text-xs sm:text-sm rounded-full mb-3 sm:mb-4">
                 🔥 Producto Estrella
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">SDR IA</h1>
-              <p className="text-2xl text-imgenia-blue font-medium mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">SDR IA</h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-imgenia-blue font-medium mb-4 sm:mb-6">
                 El sistema que gestiona tus leads y los convierte en reuniones reales de venta
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 Contacta en segundos. Cualifica automáticamente. Agenda más reuniones.
               </p>
             </div>
@@ -162,20 +162,20 @@ export default function SdrIADetail() {
               <img
                 src="/sdr_ia_1.png"
                 alt="SDR IA Dashboard - The War Room"
-                className="relative rounded-2xl shadow-2xl border border-gray-200"
+                className="relative rounded-xl sm:rounded-2xl shadow-2xl border border-gray-200 w-full"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 md:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 md:mb-24">
           {caracteristicas.map((caracteristica) => {
             const Icon = caracteristica.icon;
             return (
-              <div key={caracteristica.title} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <Icon className="w-10 h-10 text-imgenia-pink mb-4" strokeWidth={1.5} />
+              <div key={caracteristica.title} className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-shadow">
+                <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-imgenia-pink mb-3 sm:mb-4" strokeWidth={1.5} />
                 <h3 className="font-semibold text-gray-900 mb-2">{caracteristica.title}</h3>
                 <p className="text-sm text-gray-600">{caracteristica.description}</p>
               </div>
@@ -183,9 +183,9 @@ export default function SdrIADetail() {
           })}
         </div>
 
-        <div className="bg-gray-50 rounded-3xl p-12 mb-24 border border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">El problema que resuelve</h2>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        <div className="bg-gray-50 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 mb-12 sm:mb-16 md:mb-24 border border-gray-200">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">El problema que resuelve</h2>
+          <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
             Muchas empresas invierten miles de euros cada mes en generar leads… pero siguen perdiendo
             oportunidades porque su proceso comercial no está preparado para gestionar volumen.
           </p>
@@ -205,8 +205,8 @@ export default function SdrIADetail() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Qué hace SDR IA</h2>
-          <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Qué hace SDR IA</h2>
+          <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 text-center max-w-3xl mx-auto px-1">
             Nuestro sistema instala un equipo digital de agentes comerciales con IA que trabajan 24/7 dentro de tu funnel.
           </p>
 
@@ -221,7 +221,7 @@ export default function SdrIADetail() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Los 3 problemas que resuelve</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Los 3 problemas que resuelve</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-8">
@@ -263,7 +263,7 @@ export default function SdrIADetail() {
         </div>
 
         <div className="bg-gradient-to-br from-imgenia-blue/5 to-imgenia-pink/5 rounded-3xl p-12 mb-24 border border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Qué incluye la implementación</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Qué incluye la implementación</h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {implementacion.map((fase) => (
@@ -306,7 +306,7 @@ export default function SdrIADetail() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Beneficios principales</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Beneficios principales</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {beneficios.map((beneficio) => {
@@ -329,7 +329,7 @@ export default function SdrIADetail() {
 
         <div className="mb-24">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Casos de Éxito</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Casos de Éxito</h2>
             <p className="text-xl text-gray-600">Lo que dicen nuestros clientes sobre SDR IA</p>
           </div>
 
@@ -391,7 +391,7 @@ export default function SdrIADetail() {
         </div>
 
         <div className="bg-gradient-to-br from-imgenia-blue to-imgenia-navy rounded-3xl p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">¿Listo para multiplicar tus reuniones de venta?</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">¿Listo para multiplicar tus reuniones de venta?</h2>
           <p className="text-xl mb-8 text-blue-100">
             Agenda una demo de 30 minutos y descubre cómo SDR IA puede transformar tu proceso comercial
           </p>

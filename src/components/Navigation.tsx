@@ -42,13 +42,13 @@ export default function Navigation() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/90 backdrop-blur-lg shadow-sm' : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+          <Link to="/" className="flex items-center min-h-[44px]">
             <img
               src="/LogotipoPositivo.png"
               alt="IMGENIA"
-              className="h-10"
+              className="h-8 sm:h-9 md:h-10 w-auto"
             />
           </Link>
 
@@ -83,8 +83,10 @@ export default function Navigation() {
           </div>
 
           <button
+            type="button"
+            aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2"
+            className="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center -mr-1"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -92,15 +94,15 @@ export default function Navigation() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-6 py-4 space-y-3">
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
               item.href === '/' ? (
                 <Link
                   key={item.href}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors py-2"
+                  className="block text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors py-3 px-2 rounded-lg active:bg-gray-100 min-h-[44px] flex items-center"
                 >
                   {item.label}
                 </Link>
@@ -109,7 +111,7 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => handleNavigation(item.href)}
-                  className="block text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors py-2"
+                  className="block text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors py-3 px-2 rounded-lg active:bg-gray-100 min-h-[44px] flex items-center"
                 >
                   {item.label}
                 </a>

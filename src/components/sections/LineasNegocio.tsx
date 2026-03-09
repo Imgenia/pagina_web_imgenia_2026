@@ -110,7 +110,7 @@ export default function LineasNegocio() {
       subtitle="Cuatro verticales especializadas que cubren todo el espectro de necesidades empresariales en IA."
       background="gray"
     >
-      <div className="space-y-12">
+      <div className="space-y-6 sm:space-y-8 md:space-y-12">
         {lineas.map((linea) => {
           const Icon = linea.icon;
           const colorClasses = {
@@ -120,38 +120,38 @@ export default function LineasNegocio() {
           };
 
           return (
-            <div key={linea.title} className="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all">
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className={`flex-shrink-0 w-16 h-16 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[1]} rounded-2xl flex items-center justify-center`}>
-                  <Icon className={`w-8 h-8 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]}`} strokeWidth={1.5} />
+            <div key={linea.title} className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-200 hover:shadow-lg transition-all">
+              <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start">
+                <div className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[1]} rounded-xl sm:rounded-2xl flex items-center justify-center`}>
+                  <Icon className={`w-7 h-7 sm:w-8 sm:h-8 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]}`} strokeWidth={1.5} />
                 </div>
 
-                <div className="flex-1">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
+                    <div className="min-w-0">
                       {linea.featured && (
-                        <span className="inline-block px-3 py-1 bg-imgenia-pink/10 text-imgenia-pink text-xs font-semibold rounded-full mb-2">
+                        <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 bg-imgenia-pink/10 text-imgenia-pink text-xs font-semibold rounded-full mb-2">
                           🔥 Destacado
                         </span>
                       )}
-                      <h3 className="text-2xl font-bold text-gray-900">{linea.title}</h3>
-                      <p className="text-lg text-imgenia-blue font-medium">{linea.subtitle}</p>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{linea.title}</h3>
+                      <p className="text-base sm:text-lg text-imgenia-blue font-medium break-words">{linea.subtitle}</p>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 leading-relaxed mb-6">{linea.description}</p>
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">{linea.description}</p>
 
                   {linea.casos ? (
                     <div>
-                      <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Casos de éxito</p>
-                      <div className="grid sm:grid-cols-2 gap-4">
+                      <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2 sm:mb-3">Casos de éxito</p>
+                      <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                         {linea.casos.map((caso) => (
                           <Link
                             key={caso.nombre}
                             to={caso.link}
-                            className="group flex items-center gap-4 bg-gray-50 border border-gray-200 hover:border-imgenia-navy hover:shadow-md rounded-xl p-4 transition-all duration-300"
+                            className="group flex items-center gap-3 sm:gap-4 bg-gray-50 border border-gray-200 hover:border-imgenia-navy hover:shadow-md rounded-lg sm:rounded-xl p-3 sm:p-4 transition-all duration-300 min-h-[56px]"
                           >
-                            <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 border border-gray-200 bg-white flex items-center justify-center p-1">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden flex-shrink-0 border border-gray-200 bg-white flex items-center justify-center p-1">
                               {caso.imagen ? (
                                 <img src={caso.imagen} alt={caso.nombre} className="w-full h-full object-contain" />
                               ) : (
@@ -171,15 +171,15 @@ export default function LineasNegocio() {
                   ) : linea.link.startsWith('/') ? (
                     <Link
                       to={linea.link}
-                      className={`inline-flex items-center gap-2 px-6 py-3 border-2 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[2]} ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]} font-medium rounded-lg ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[3]} hover:text-white transition-all duration-300 group`}
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 border-2 min-h-[44px] ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[2]} ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]} font-medium rounded-lg text-sm sm:text-base ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[3]} hover:text-white transition-all duration-300 group`}
                     >
                       Ver más detalles
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                     </Link>
                   ) : (
                     <a
                       href={linea.link}
-                      className={`inline-flex items-center gap-2 px-6 py-3 border-2 ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[2]} ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]} font-medium rounded-lg ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[3]} hover:text-white transition-all duration-300 group`}
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 border-2 min-h-[44px] ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[2]} ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]} font-medium rounded-lg text-sm sm:text-base ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[3]} hover:text-white transition-all duration-300 group`}
                     >
                       Más información
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

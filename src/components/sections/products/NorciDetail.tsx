@@ -81,8 +81,8 @@ export default function NorciDetail() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-br from-imgenia-blue/5 via-white to-imgenia-pink/5 py-20 pt-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="bg-gradient-to-br from-imgenia-blue/5 via-white to-imgenia-pink/5 py-10 sm:py-14 md:py-20 pt-24 sm:pt-28 md:pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Link to="/" className="inline-flex items-center gap-2 text-imgenia-blue hover:text-imgenia-navy mb-8 transition-colors">
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Volver al inicio</span>
@@ -93,8 +93,8 @@ export default function NorciDetail() {
               <div className="inline-block px-4 py-2 bg-imgenia-blue/10 text-imgenia-blue font-semibold text-sm rounded-full mb-4">
                 Caso de Éxito · A Medida
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">NORCI Logística</h1>
-              <p className="text-2xl text-imgenia-blue font-medium mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">NORCI Logística</h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-imgenia-blue font-medium mb-4 sm:mb-6">
                 Plataforma de IA para la explotación de datos G3 (MRW)
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -114,14 +114,14 @@ export default function NorciDetail() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6 py-10 sm:py-14 md:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {impactos.map((item) => {
             const Icon = item.icon;
             return (
               <div key={item.label} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow text-center">
                 <Icon className="w-8 h-8 text-imgenia-blue mx-auto mb-3" strokeWidth={1.5} />
-                <div className="text-4xl font-bold text-imgenia-pink mb-2">{item.metric}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-imgenia-pink mb-2">{item.metric}</div>
                 <div className="font-semibold text-gray-900 text-sm mb-1">{item.label}</div>
                 <div className="text-xs text-gray-500">{item.detail}</div>
               </div>
@@ -131,7 +131,7 @@ export default function NorciDetail() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
           <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">El problema de negocio</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6">El problema de negocio</h2>
             <p className="text-gray-700 leading-relaxed mb-8">
               NORCI gestiona el ciclo logístico completo para sus clientes de ecommerce, con integración nativa a Shopify, WooCommerce, Magento y otros. La operación diaria con G3 de MRW genera listados donde el nombre del destinatario aparece escrito de formas completamente distintas, bloqueando la explotación de datos.
             </p>
@@ -146,7 +146,7 @@ export default function NorciDetail() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">El cliente</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6">El cliente</h2>
             <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-6">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
@@ -184,7 +184,7 @@ export default function NorciDetail() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">La solución: IAMAI MRW</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">La solución: IAMAI MRW</h2>
           <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
             Una capa de inteligencia artificial sobre los datos exportados de G3 que no sustituye al sistema, sino que enriquece y estructura su salida para que NORCI pueda explotarla con un mínimo de intervención manual.
           </p>
@@ -204,7 +204,7 @@ export default function NorciDetail() {
         </div>
 
         <div className="bg-gradient-to-br from-imgenia-blue/5 to-imgenia-pink/5 rounded-3xl p-12 mb-24 border border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">La plataforma en acción</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">La plataforma en acción</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
               <img
@@ -224,7 +224,7 @@ export default function NorciDetail() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Stack tecnológico</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-12 text-center">Stack tecnológico</h2>
           <div className="max-w-3xl mx-auto space-y-3">
             {stack.map((item) => (
               <div key={item.label} className="flex items-start gap-4 bg-white border border-gray-200 rounded-xl p-5">
@@ -236,21 +236,21 @@ export default function NorciDetail() {
         </div>
 
         <div className="bg-gray-900 rounded-3xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">El resultado</h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6">El resultado</h2>
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
             La explotación diaria de G3 dejó de depender de horas de trabajo manual de reconciliación y se convirtió en un proceso semi-automatizado y auditable. El mismo pipeline puede seguir creciendo con más datos o más reglas sin cambiar el flujo de trabajo básico de NORCI.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div className="bg-white/10 rounded-xl p-6">
-              <div className="text-4xl font-bold text-imgenia-pink mb-2">80%</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-imgenia-pink mb-2">80%</div>
               <div className="text-white font-medium">Reducción de tiempo de explotación</div>
             </div>
             <div className="bg-white/10 rounded-xl p-6">
-              <div className="text-4xl font-bold text-imgenia-pink mb-2">+3h/día</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-imgenia-pink mb-2">+3h/día</div>
               <div className="text-white font-medium">Ahorro de trabajo manual</div>
             </div>
             <div className="bg-white/10 rounded-xl p-6">
-              <div className="text-4xl font-bold text-imgenia-pink mb-2">100%</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-imgenia-pink mb-2">100%</div>
               <div className="text-white font-medium">Trazabilidad y auditabilidad</div>
             </div>
           </div>

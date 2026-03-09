@@ -9,13 +9,13 @@ export default function Metodo() {
       subtitle="Arquitectura propietaria vs soluciones plug-and-play genéricas."
       background="white"
     >
-      <div className="max-w-5xl mx-auto bg-white border-2 border-gray-200 rounded-2xl overflow-hidden">
+      <div className="max-w-5xl mx-auto bg-white border-2 border-gray-200 rounded-xl sm:rounded-2xl overflow-hidden">
         <div className="grid md:grid-cols-2">
-          <div className="p-8 bg-red-50/50 border-r border-gray-200">
-            <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <div className="p-5 sm:p-6 md:p-8 bg-red-50/50 md:border-r border-b md:border-b-0 border-gray-200">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
               <span className="text-red-500">✕</span> Enfoque Plug-&-Play
             </h3>
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-1">•</span>
                 <span>Solución genérica one-size-fits-all</span>
@@ -35,11 +35,11 @@ export default function Metodo() {
             </ul>
           </div>
 
-          <div className="p-8 bg-green-50/50">
-            <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <div className="p-5 sm:p-6 md:p-8 bg-green-50/50">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
               <span className="text-green-500">✓</span> Arquitectura <ImgeniaText />
             </h3>
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-green-500 mt-1">•</span>
                 <span>Personalizado para tu caso de uso</span>

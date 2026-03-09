@@ -81,8 +81,8 @@ export default function IamaiEolicaDetail() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gradient-to-br from-imgenia-navy/5 via-white to-imgenia-blue/5 py-20 pt-32">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="bg-gradient-to-br from-imgenia-navy/5 via-white to-imgenia-blue/5 py-10 sm:py-14 md:py-20 pt-24 sm:pt-28 md:pt-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <Link to="/" className="inline-flex items-center gap-2 text-imgenia-blue hover:text-imgenia-navy mb-8 transition-colors">
             <ArrowLeft className="w-5 h-5" />
             <span className="font-medium">Volver al inicio</span>
@@ -93,8 +93,8 @@ export default function IamaiEolicaDetail() {
               <div className="inline-block px-4 py-2 bg-imgenia-navy/10 text-imgenia-navy font-semibold text-sm rounded-full mb-4">
                 Caso de Éxito · Energía
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">Endesa · IAMAI Eólica</h1>
-              <p className="text-2xl text-imgenia-navy font-medium mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">Endesa · IAMAI Eólica</h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-imgenia-navy font-medium mb-4 sm:mb-6">
                 Ecosistema de IAs distribuidas para parques eólicos
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -116,7 +116,7 @@ export default function IamaiEolicaDetail() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4 sm:px-6 py-10 sm:py-14 md:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {impactos.map((item) => {
             const Icon = item.icon;

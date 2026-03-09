@@ -55,7 +55,7 @@ export default function CasosExito() {
       subtitle="Resultados reales en empresas reales. Transformaciones medibles desde el primer día."
       background="gray"
     >
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
         {casos.map((caso) => {
           const borderColor = caso.color === 'pink' ? 'border-imgenia-pink/30 hover:border-imgenia-pink' : caso.color === 'navy' ? 'border-imgenia-navy/30 hover:border-imgenia-navy' : 'border-imgenia-blue/30 hover:border-imgenia-blue';
           const badgeColor = caso.color === 'pink' ? 'bg-imgenia-pink/10 text-imgenia-pink' : caso.color === 'navy' ? 'bg-imgenia-navy/10 text-imgenia-navy' : 'bg-imgenia-blue/10 text-imgenia-blue';
@@ -63,38 +63,38 @@ export default function CasosExito() {
           const btnBorder = caso.color === 'pink' ? 'border-imgenia-pink text-imgenia-pink hover:bg-imgenia-pink' : caso.color === 'navy' ? 'border-imgenia-navy text-imgenia-navy hover:bg-imgenia-navy' : 'border-imgenia-blue text-imgenia-blue hover:bg-imgenia-blue';
 
           return (
-            <div key={caso.cliente} className={`bg-white rounded-2xl border-2 ${borderColor} transition-all hover:shadow-xl overflow-hidden`}>
+            <div key={caso.cliente} className={`bg-white rounded-xl sm:rounded-2xl border-2 ${borderColor} transition-all hover:shadow-xl overflow-hidden`}>
               {/* Logo de la empresa */}
-              <div className="h-32 sm:h-36 bg-gray-50 flex items-center justify-center px-6 py-6 border-b border-gray-100">
+              <div className="h-24 sm:h-32 md:h-36 bg-gray-50 flex items-center justify-center px-4 py-4 sm:px-6 sm:py-6 border-b border-gray-100">
                 <img
                   src={caso.logo}
                   alt={caso.cliente}
                   className="max-h-full w-auto max-w-full object-contain"
                 />
               </div>
-              <div className="p-8">
-                <div className={`inline-block px-3 py-1 ${badgeColor} text-xs font-semibold rounded-full mb-3`}>
+              <div className="p-4 sm:p-6 md:p-8">
+                <div className={`inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 ${badgeColor} text-xs font-semibold rounded-full mb-2 sm:mb-3`}>
                   {caso.producto}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-1">{caso.cliente}</h3>
-                <p className="text-sm text-gray-500 mb-4">{caso.sector}</p>
-                <p className="text-gray-700 leading-relaxed mb-6">{caso.descripcion}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1">{caso.cliente}</h3>
+                <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">{caso.sector}</p>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">{caso.descripcion}</p>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
                   {caso.metricas.map((m) => (
-                    <div key={m.label} className="bg-gray-50 rounded-xl p-4 text-center">
-                      <div className={`text-3xl font-bold ${metricColor} mb-1`}>{m.valor}</div>
-                      <div className="text-xs text-gray-600 font-medium">{m.label}</div>
+                    <div key={m.label} className="bg-gray-50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
+                      <div className={`text-xl sm:text-2xl md:text-3xl font-bold ${metricColor} mb-0.5 sm:mb-1`}>{m.valor}</div>
+                      <div className="text-[10px] sm:text-xs text-gray-600 font-medium leading-tight">{m.label}</div>
                     </div>
                   ))}
                 </div>
 
                 <Link
                   to={caso.link}
-                  className={`inline-flex items-center gap-2 px-6 py-3 border-2 ${btnBorder} font-medium rounded-lg hover:text-white transition-all duration-300 group`}
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 border-2 min-h-[44px] ${btnBorder} font-medium rounded-lg text-sm sm:text-base hover:text-white transition-all duration-300 group`}
                 >
                   Ver caso completo
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
                 </Link>
               </div>
             </div>

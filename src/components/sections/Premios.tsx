@@ -9,50 +9,48 @@ const metricas = [
 
 export default function Premios() {
   return (
-    <section id="premios" className="bg-[#070d1a] py-20 lg:py-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="premios" className="bg-[#070d1a] py-12 sm:py-16 md:py-20 lg:py-28 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ── Cabecera ─────────────────────────────────────────────── */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-5 py-2 mb-6">
-            <Trophy className="w-4 h-4 text-amber-400" strokeWidth={2} />
-            <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">
+        <div className="text-center mb-8 sm:mb-10 md:mb-14">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-amber-500/10 border border-amber-500/30 rounded-full px-3 py-1.5 sm:px-5 sm:py-2 mb-4 sm:mb-6">
+            <Trophy className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-400 flex-shrink-0" strokeWidth={2} />
+            <span className="text-amber-400 text-[10px] sm:text-xs font-bold tracking-widest uppercase">
               Reconocimiento Oficial · ASEYACOVI 2025
             </span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-5">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight mb-3 sm:mb-5 px-1">
             Premio a la Pyme<br />
             <span className="text-imgenia-cyan">más Innovadora</span>
           </h2>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-1">
             La Asociación de Empresarios y Autónomos de Colmenar Viejo reconoció a IMGENIA como
             la empresa más innovadora del tejido empresarial colmenareño.
           </p>
         </div>
 
         {/* ── Banda "En colaboración con" ───────────────────────────── */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-16">
-          <span className="text-gray-500 text-xs font-bold tracking-widest uppercase whitespace-nowrap">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 mb-10 sm:mb-16">
+          <span className="text-gray-500 text-[10px] sm:text-xs font-bold tracking-widest uppercase whitespace-nowrap">
             En colaboración con
           </span>
           <div className="hidden sm:block h-px w-12 bg-gray-700" />
-          <div className="flex items-center gap-8">
-            {/* Logo ASEYACOVI: fondo negro → mix-blend-mode screen elimina el negro sobre fondo oscuro */}
+          <div className="flex items-center gap-4 sm:gap-8 flex-wrap justify-center">
             <img
               src="/Logo-Aseyacovi-textos.png"
               alt="ASEYACOVI"
-              className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              className="h-10 sm:h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
               style={{ mixBlendMode: 'screen' }}
             />
-            <div className="h-8 w-px bg-gray-600" />
-            {/* Logo Colmenar Viejo: PNG con fondo claro → caja blanca */}
-            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
+            <div className="h-6 sm:h-8 w-px bg-gray-600" />
+            <div className="bg-white rounded-lg sm:rounded-xl px-3 py-1.5 sm:px-4 sm:py-2 shadow-md">
               <img
                 src="/colmenar.png"
                 alt="Ayuntamiento de Colmenar Viejo"
-                className="h-10 w-auto object-contain"
+                className="h-8 sm:h-10 w-auto object-contain"
               />
             </div>
           </div>
@@ -60,14 +58,14 @@ export default function Premios() {
         </div>
 
         {/* ── Bloque principal: historia + galería ─────────────────── */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start mb-10 sm:mb-16">
 
           {/* Historia */}
           <div>
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4 sm:mb-6">
               Una noche de celebración<br />e innovación
             </h3>
-            <div className="space-y-4 text-gray-300 leading-relaxed text-[15px]">
+            <div className="space-y-3 sm:space-y-4 text-gray-300 leading-relaxed text-sm sm:text-[15px]">
               <p>
                 En el marco de la{' '}
                 <strong className="text-white">IX Gala Empresarial de ASEYACOVI</strong>,
@@ -99,21 +97,21 @@ export default function Premios() {
             </div>
 
             {/* Botones */}
-            <div className="flex flex-wrap gap-3 mt-8">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-6 sm:mt-8">
               <a
                 href="https://colmenaraldia.com/2025/11/07/la-gala-anual-de-aseyacovi-se-consolida-como-el-mejor-encuentro-empresarial-del-norte-de-la-comunidad-de-madrid/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-imgenia-cyan text-white font-semibold px-5 py-3 rounded-xl hover:bg-imgenia-cyan/80 transition-colors text-sm"
+                className="inline-flex items-center gap-1.5 sm:gap-2 bg-imgenia-cyan text-white font-semibold px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-imgenia-cyan/80 transition-colors text-xs sm:text-sm min-h-[44px]"
               >
-                <ExternalLink className="w-4 h-4" />
+                <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                 Noticia en Colmenar al Día
               </a>
               <a
                 href="https://www.linkedin.com/posts/angel-gomez-calcerrada_imgenia-innovaci%C3%B3n-premiopymeinnovadora-activity-7393918807959941120-G2ev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-[#0077b5] text-[#0077b5] font-semibold px-5 py-3 rounded-xl hover:bg-[#0077b5]/10 transition-colors text-sm"
+                className="inline-flex items-center gap-1.5 sm:gap-2 border border-[#0077b5] text-[#0077b5] font-semibold px-4 py-2.5 sm:px-5 sm:py-3 rounded-lg sm:rounded-xl hover:bg-[#0077b5]/10 transition-colors text-xs sm:text-sm min-h-[44px]"
               >
                 {/* LinkedIn icon inline para no depender de lucide */}
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -125,22 +123,22 @@ export default function Premios() {
           </div>
 
           {/* Galería */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="col-span-2 rounded-2xl overflow-hidden h-52 sm:h-64">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            <div className="col-span-2 rounded-xl sm:rounded-2xl overflow-hidden h-40 sm:h-52 md:h-64 aspect-video">
               <img
                 src="/_V6A3193.jpg"
                 alt="IMGENIA recibiendo el Premio Pyme más Innovadora · ASEYACOVI 2025"
                 className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="rounded-xl overflow-hidden h-36 sm:h-44">
+            <div className="rounded-lg sm:rounded-xl overflow-hidden h-28 sm:h-36 md:h-44">
               <img
                 src="/_V6A3025.jpg"
                 alt="IX Gala Empresarial ASEYACOVI 2025"
                 className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
               />
             </div>
-            <div className="rounded-xl overflow-hidden h-36 sm:h-44">
+            <div className="rounded-lg sm:rounded-xl overflow-hidden h-28 sm:h-36 md:h-44">
               <img
                 src="/_V6A3031.jpg"
                 alt="IX Gala Empresarial ASEYACOVI 2025"
@@ -151,35 +149,35 @@ export default function Premios() {
         </div>
 
         {/* ── Métricas ─────────────────────────────────────────────── */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 mb-10 sm:mb-16">
           {metricas.map((m) => {
             const Icon = m.icono;
             return (
               <div
                 key={m.label}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/8 transition-colors"
+                className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:bg-white/8 transition-colors"
               >
-                <Icon className="w-5 h-5 text-imgenia-cyan mx-auto mb-3" strokeWidth={1.5} />
-                <div className="text-3xl font-black text-white mb-1">{m.valor}</div>
-                <div className="text-gray-400 text-sm leading-snug">{m.label}</div>
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-imgenia-cyan mx-auto mb-2 sm:mb-3" strokeWidth={1.5} />
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-0.5 sm:mb-1">{m.valor}</div>
+                <div className="text-gray-400 text-[10px] sm:text-xs md:text-sm leading-snug">{m.label}</div>
               </div>
             );
           })}
         </div>
 
         {/* ── Cita final ───────────────────────────────────────────── */}
-        <div className="relative rounded-2xl border border-white/10 overflow-hidden">
+        <div className="relative rounded-xl sm:rounded-2xl border border-white/10 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-imgenia-cyan/5 via-transparent to-imgenia-purple/5" />
-          <div className="relative px-8 py-10 text-center">
+          <div className="relative px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 text-center">
             <img
               src="/isotipo-redondo.png"
               alt="IMGENIA"
-              className="h-12 mx-auto mb-5 opacity-75"
+              className="h-10 sm:h-12 mx-auto mb-3 sm:mb-5 opacity-75"
             />
-            <blockquote className="text-xl lg:text-2xl font-semibold text-white italic mb-3">
+            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white italic mb-2 sm:mb-3 px-1">
               "La innovación no es un destino, es una forma de caminar."
             </blockquote>
-            <p className="text-imgenia-cyan font-semibold text-sm tracking-wide">
+            <p className="text-imgenia-cyan font-semibold text-xs sm:text-sm tracking-wide">
               IMGENIA · Premio Pyme más Innovadora · ASEYACOVI 2025
             </p>
           </div>

@@ -24,25 +24,26 @@ export default function CookieConsent() {
       role="dialog"
       aria-label="Aviso de cookies"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-sm text-gray-200 leading-relaxed flex-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4">
+          <p className="text-xs sm:text-sm text-gray-200 leading-relaxed flex-1 min-w-0">
             Utilizamos cookies propias y de terceros para mejorar tu experiencia, analizar el tráfico y mostrar contenido relevante. 
             Puedes aceptar todas las cookies o configurar tus preferencias en nuestra{' '}
             <Link to="/politica-cookies" className="text-imgenia-cyan underline hover:no-underline">
               Política de Cookies
             </Link>.
           </p>
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto flex-shrink-0">
             <Link
               to="/politica-cookies"
-              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white border border-gray-600 rounded-lg transition-colors"
+              className="flex-1 sm:flex-none px-4 py-2.5 text-xs sm:text-sm font-medium text-gray-300 hover:text-white border border-gray-600 rounded-lg transition-colors text-center min-h-[44px] flex items-center justify-center"
             >
               Configurar
             </Link>
             <button
+              type="button"
               onClick={accept}
-              className="px-5 py-2 text-sm font-semibold bg-imgenia-blue text-white rounded-lg hover:bg-imgenia-navy transition-colors"
+              className="flex-1 sm:flex-none px-4 py-2.5 sm:px-5 text-xs sm:text-sm font-semibold bg-imgenia-blue text-white rounded-lg hover:bg-imgenia-navy transition-colors min-h-[44px]"
             >
               Aceptar todas
             </button>
