@@ -13,6 +13,7 @@ import PoliticaCookies from './pages/PoliticaCookies';
 import PoliticaSeguridad from './pages/PoliticaSeguridad';
 import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
+import UmamiAnalytics from './components/UmamiAnalytics';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ function ScrollToTop() {
 function App() {
   return (
     <>
+      <UmamiAnalytics />
       <ScrollToTop />
       <CookieConsent />
       <div className="min-h-screen flex flex-col">
