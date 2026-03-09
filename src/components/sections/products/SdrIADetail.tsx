@@ -91,8 +91,8 @@ export default function SdrIADetail() {
 
   const casosExito = [
     {
-      empresa: 'TechSolutions SL',
       sector: 'Software B2B',
+      descriptor: 'Empresa de soluciones SaaS para equipos comerciales',
       logo: '🚀',
       resultado: '+320% reuniones agendadas',
       testimonio: 'Antes perdíamos el 70% de los leads por no contactar rápido. Con SDR IA respondemos en segundos y nuestra tasa de conversión se multiplicó por 5. El equipo comercial ahora solo se dedica a cerrar ventas.',
@@ -105,8 +105,8 @@ export default function SdrIADetail() {
       ]
     },
     {
-      empresa: 'Inmobiliaria Digital',
       sector: 'PropTech',
+      descriptor: 'Inmobiliaria digital y gestión de activos',
       logo: '🏢',
       resultado: '67% reducción en no-shows',
       testimonio: 'El mayor problema no era generar leads, sino que llegaran a la reunión. SDR IA confirmó, recordó y reprogramó automáticamente. Pasamos de perder casi la mitad de las citas a tener un 82% de asistencia.',
@@ -119,8 +119,8 @@ export default function SdrIADetail() {
       ]
     },
     {
-      empresa: 'FinanzasPlus',
       sector: 'Fintech',
+      descriptor: 'Empresa de servicios financieros B2B',
       logo: '💰',
       resultado: '€47K ahorro mensual en SDRs',
       testimonio: 'Teníamos 4 SDRs que no daban abasto. SDR IA hace el trabajo de 8 personas, sin errores y 24/7. La inversión se amortizó en 3 semanas. Ahora escalamos sin límites.',
@@ -343,8 +343,8 @@ export default function SdrIADetail() {
                         {caso.logo}
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900">{caso.empresa}</h3>
-                        <p className="text-gray-600">{caso.sector}</p>
+                        <h3 className="text-2xl font-bold text-gray-900">{caso.sector}</h3>
+                        <p className="text-gray-600">{caso.descriptor}</p>
                       </div>
                     </div>
 
