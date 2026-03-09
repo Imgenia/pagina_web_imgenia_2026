@@ -13,7 +13,7 @@ const fundadores = [
     rol: 'CEO y Fundador',
     frase: 'Creo en la IA que ayuda a dormir tranquilo.',
     linkedin: 'https://linkedin.com/in/arturo-mesa-540579a2',
-    foto: '/Arturo.jpg',
+    foto: '/arturo03.png',
   },
   {
     nombre: 'Ángel Gómez',

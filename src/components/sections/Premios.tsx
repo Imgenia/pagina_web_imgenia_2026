@@ -38,16 +38,17 @@ export default function Premios() {
             En colaboración con
           </span>
           <div className="hidden sm:block h-px w-12 bg-gray-700" />
-          <div className="flex items-center gap-5">
-            <div className="bg-white rounded-2xl px-5 py-3 shadow-lg">
-              <img
-                src="/Logo-Aseyacovi-textos.png"
-                alt="ASEYACOVI"
-                className="h-10 w-auto object-contain"
-              />
-            </div>
+          <div className="flex items-center gap-8">
+            {/* Logo ASEYACOVI: fondo negro → mix-blend-mode screen elimina el negro sobre fondo oscuro */}
+            <img
+              src="/Logo-Aseyacovi-textos.png"
+              alt="ASEYACOVI"
+              className="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              style={{ mixBlendMode: 'screen' }}
+            />
             <div className="h-8 w-px bg-gray-600" />
-            <div className="bg-white rounded-2xl px-5 py-3 shadow-lg">
+            {/* Logo Colmenar Viejo: PNG con fondo claro → caja blanca */}
+            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
               <img
                 src="/colmenar.png"
                 alt="Ayuntamiento de Colmenar Viejo"

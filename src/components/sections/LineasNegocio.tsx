@@ -47,7 +47,7 @@ export default function LineasNegocio() {
           sector: 'Alta tecnología · Asistente técnico IA',
           metrica: '-70% soporte humano repetitivo',
           link: '/caso-test-my-bike',
-          imagen: '/logo_test_my_bike.png'
+          imagen: '/logo_test_my bike.png'
         }
       ]
     },

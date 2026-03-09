@@ -107,7 +107,7 @@ export default function TestMyBikeDetail() {
                 <div className="absolute inset-0 bg-gradient-to-br from-imgenia-blue/20 to-cyan-300/20 rounded-3xl blur-3xl scale-110"></div>
                 <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-100 p-12 flex items-center justify-center">
                   <img
-                    src="/logo_test_my_bike.png"
+                    src="/logo_test_my bike.png"
                     alt="Test My Bike"
                     className="h-24 w-auto object-contain"
                   />
@@ -158,7 +158,7 @@ export default function TestMyBikeDetail() {
             <div className="bg-white border border-gray-200 rounded-2xl p-8 mb-6">
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
                 <img
-                  src="/logo_test_my_bike.png"
+                  src="/logo_test_my bike.png"
                   alt="Test My Bike"
                   className="h-10 w-auto object-contain"
                 />
