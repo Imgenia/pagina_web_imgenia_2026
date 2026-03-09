@@ -2,11 +2,11 @@ import Section from '../Section';
 
 const fundadores = [
   {
-    nombre: 'José Luis Zamora',
-    rol: 'Director de Negocio',
+    nombre: 'Antonio Marin Fuentes',
+    rol: 'COO · Chief Operating Officer',
     frase: 'La tecnología debe adaptarse a las personas, no al revés.',
     linkedin: 'https://www.linkedin.com/company/imgenia/',
-    foto: '/Jose Luis.jpeg',
+    foto: '/Jose Luis.png',
   },
   {
     nombre: 'Arturo Mesa',
