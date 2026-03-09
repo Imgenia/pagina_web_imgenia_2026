@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Qué Hacemos', href: '/#que-hacemos' },
   { label: 'Líneas de Negocio', href: '/#lineas-negocio' },
   { label: 'Premios', href: '/#premios' },
+  { label: 'Agradecimientos', href: '/#agradecimientos' },
   { label: 'Método', href: '/#metodo' },
   { label: 'Equipo', href: '/#equipo' },
   { label: 'Proceso', href: '/#proceso' },
@@ -51,13 +52,13 @@ export default function Navigation() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-x-10">
             {navItems.map((item) => (
               item.href === '/' ? (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors"
+                  className="text-xs font-medium text-gray-600 hover:text-imgenia-blue transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
@@ -73,7 +74,7 @@ export default function Navigation() {
                       }
                     }
                   }}
-                  className="text-sm font-medium text-gray-600 hover:text-imgenia-blue transition-colors"
+                  className="text-xs font-medium text-gray-600 hover:text-imgenia-blue transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </a>

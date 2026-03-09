@@ -6,6 +6,7 @@ import QueHacemos from '../components/sections/QueHacemos';
 import LineasNegocio from '../components/sections/LineasNegocio';
 import CasosExito from '../components/sections/CasosExito';
 import Premios from '../components/sections/Premios';
+import Agradecimientos from '../components/sections/Agradecimientos';
 import Metodo from '../components/sections/Metodo';
 import Equipo from '../components/sections/Equipo';
 import Proceso from '../components/sections/Proceso';
@@ -23,6 +24,7 @@ export default function HomePage() {
         <LineasNegocio />
         <CasosExito />
         <Premios />
+        <Agradecimientos />
         <Metodo />
         <Equipo />
         <Proceso />
