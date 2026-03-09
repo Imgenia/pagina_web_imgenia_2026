@@ -34,7 +34,9 @@ export default function Contacto() {
               Reserva 30 minutos en nuestra agenda para una demo personalizada.
             </p>
             <a
-              href="#demo"
+              href="https://api.leadconnectorhq.com/widget/booking/yYn8SETZe0XujykkVF23"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-imgenia-pink font-medium hover:gap-3 transition-all"
             >
               Reservar ahora
