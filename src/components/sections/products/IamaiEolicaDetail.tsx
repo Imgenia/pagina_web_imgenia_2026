@@ -103,11 +103,13 @@ export default function IamaiEolicaDetail() {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-imgenia-navy/20 to-imgenia-blue/20 rounded-3xl blur-3xl"></div>
-              <div className="relative rounded-2xl shadow-2xl border border-gray-200 overflow-hidden bg-gradient-to-br from-imgenia-navy/10 to-imgenia-blue/10 aspect-video flex flex-col items-center justify-center gap-4">
-                <Wind className="w-20 h-20 text-imgenia-navy/40" strokeWidth={1} />
-                <span className="text-imgenia-navy font-semibold text-lg">IAMAI Eólica</span>
-                <span className="text-gray-500 text-sm">Ecosistema de IA para energía eólica</span>
+              <div className="absolute inset-0 bg-gradient-to-br from-imgenia-navy/20 to-imgenia-blue/20 rounded-3xl blur-3xl scale-105"></div>
+              <div className="relative rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <img
+                  src="/iamai_04.png"
+                  alt="IAMAI Eólica — Ecosistema de IA para energía eólica: interfaz conversacional con gráficos de penalización por reactiva y potencia activa"
+                  className="w-full h-auto object-cover object-top"
+                />
               </div>
             </div>
           </div>

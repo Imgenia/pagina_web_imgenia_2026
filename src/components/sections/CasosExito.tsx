@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Section from '../Section';
-import { ArrowRight, Wind } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function CasosExito() {
   const casos = [
@@ -13,6 +13,7 @@ export default function CasosExito() {
         { valor: '-80%', label: 'Tiempo de explotación' },
         { valor: '+3h/día', label: 'Liberadas por operador' }
       ],
+      logo: '/NORCI_LOGO2.png',
       imagen: '/norci_1.png',
       link: '/caso-norci',
       color: 'blue'
@@ -26,6 +27,7 @@ export default function CasosExito() {
         { valor: '-75%', label: 'Tiempo de gestión' },
         { valor: 'x3-4', label: 'Capacidad de escala' }
       ],
+      logo: '/Incotrading_logo.png',
       imagen: '/iamai_pedidos_1.png',
       link: '/caso-incotrading',
       color: 'pink'
@@ -39,6 +41,7 @@ export default function CasosExito() {
         { valor: 'Minutos', label: 'Para analizar semanas de datos' },
         { valor: 'x10', label: 'Potencial multi-parque' }
       ],
+      logo: '/enel.png',
       imagen: '/iamai_05.png',
       link: '/caso-iamai-eolica',
       color: 'navy'
@@ -61,19 +64,13 @@ export default function CasosExito() {
 
           return (
             <div key={caso.cliente} className={`bg-white rounded-2xl border-2 ${borderColor} transition-all hover:shadow-xl overflow-hidden`}>
-              <div className="aspect-video overflow-hidden">
-                {caso.imagen ? (
-                  <img
-                    src={caso.imagen}
-                    alt={`${caso.cliente} - ${caso.producto}`}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-imgenia-navy/10 to-imgenia-blue/10 flex flex-col items-center justify-center gap-3">
-                    <Wind className="w-12 h-12 text-imgenia-navy/30" strokeWidth={1} />
-                    <span className="text-xs text-gray-400">Imagen próximamente</span>
-                  </div>
-                )}
+              {/* Logo de la empresa */}
+              <div className="h-32 sm:h-36 bg-gray-50 flex items-center justify-center px-6 py-6 border-b border-gray-100">
+                <img
+                  src={caso.logo}
+                  alt={caso.cliente}
+                  className="max-h-full w-auto max-w-full object-contain"
+                />
               </div>
               <div className="p-8">
                 <div className={`inline-block px-3 py-1 ${badgeColor} text-xs font-semibold rounded-full mb-3`}>

@@ -93,7 +93,7 @@ export default function LineasNegocio() {
       link: '#contacto',
       casos: [
         {
-          nombre: 'AJP Systems · Sector Energético',
+          nombre: 'AJP · Sector Energético',
           sector: 'Energía · Grandes parques eólicos y fotovoltaicos',
           metrica: 'Auditoría activa de agentes IA multiagenticos',
           link: '/caso-ajp',

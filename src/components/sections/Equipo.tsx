@@ -27,7 +27,7 @@ const fundadores = [
     rol: 'Director de Investigación',
     frase: 'Innovación responsable es nuestro compromiso diario.',
     linkedin: 'https://www.linkedin.com/company/imgenia/',
-    foto: '/julio.jpeg',
+    foto: '/julio02.png',
   },
 ];
 

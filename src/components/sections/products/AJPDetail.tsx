@@ -104,12 +104,12 @@ export default function AJPDetail() {
               <div className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 font-semibold text-sm rounded-full mb-4 border border-blue-500/30">
                 Caso de Éxito · Seguridad IA
               </div>
-              <h1 className="text-5xl font-bold text-white mb-4 leading-tight">AJP Systems</h1>
+              <h1 className="text-5xl font-bold text-white mb-4 leading-tight">AJP</h1>
               <p className="text-2xl text-blue-300 font-medium mb-6">
                 Supervisión y auditoría de agentes IA en el sector energético
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                Cómo <ImgeniaText /> dotó a AJP Systems de una suite completa de seguridad IA para que sus sistemas multiagenticos operen en proyectos críticos de energía renovable con trazabilidad total y cumplimiento normativo garantizado.
+                Cómo <ImgeniaText /> dotó a AJP de una suite completa de seguridad IA para que sus sistemas multiagenticos operen en proyectos críticos de energía renovable con trazabilidad total y cumplimiento normativo garantizado.
               </p>
 
               <div className="flex flex-wrap gap-3 mt-8">
@@ -122,18 +122,32 @@ export default function AJPDetail() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center">
-              <div className="relative">
+            <div className="flex flex-col items-center justify-center gap-6">
+              {/* Logo AJP */}
+              <div className="relative w-full max-w-sm">
                 <div className="absolute inset-0 bg-blue-500/20 rounded-3xl blur-3xl scale-110"></div>
                 <div className="relative bg-white/5 backdrop-blur rounded-3xl shadow-2xl border border-white/10 p-12 flex items-center justify-center">
                   <img
                     src="/AJPsytemFondeado_RGB.png"
-                    alt="AJP Systems"
+                    alt="AJP"
                     className="h-24 w-auto object-contain"
                   />
                 </div>
               </div>
-              <div className="mt-6 flex items-center gap-2 text-sm text-slate-400">
+              {/* Imágenes del producto: Monitor de Auditoría */}
+              <div className="w-full max-w-sm space-y-4">
+                <img
+                  src="/aplicativo%201.png"
+                  alt="Monitor de Auditoría en Tiempo Real — AJP"
+                  className="w-full rounded-xl border border-white/10 shadow-xl object-cover object-top"
+                />
+                <img
+                  src="/aplicativo%202.png"
+                  alt="Monitor de Auditoría en Tiempo Real — detalle de acciones"
+                  className="w-full rounded-xl border border-white/10 shadow-xl object-cover object-top"
+                />
+              </div>
+              <div className="flex items-center gap-2 text-sm text-slate-400">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                 Ingeniería de alta tecnología · Sector energético
               </div>
@@ -161,7 +175,7 @@ export default function AJPDetail() {
           <div className="bg-gray-50 rounded-3xl p-10 border border-gray-200">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">El reto</h2>
             <p className="text-gray-700 leading-relaxed mb-8">
-              AJP Systems desarrolla sistemas multiagenticos de alta complejidad para el sector energético, trabajando con grandes utilities como Endesa, EDP y Naturgy en la operación de parques eólicos y fotovoltaicos. La criticidad de sus proyectos exigía que ninguna acción de sus agentes IA quedara fuera del control y la trazabilidad.
+              AJP desarrolla sistemas multiagenticos de alta complejidad para el sector energético, trabajando con grandes utilities como Endesa, EDP y Naturgy en la operación de parques eólicos y fotovoltaicos. La criticidad de sus proyectos exigía que ninguna acción de sus agentes IA quedara fuera del control y la trazabilidad.
             </p>
             <div className="space-y-3">
               {problemas.map((problema) => (
@@ -179,14 +193,14 @@ export default function AJPDetail() {
               <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
                 <img
                   src="/AJPsytemFondeado_RGB.png"
-                  alt="AJP Systems"
+                  alt="AJP"
                   className="h-10 w-auto object-contain"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span className="text-gray-500 block">Empresa</span>
-                  <span className="font-semibold text-gray-900">AJP Systems</span>
+                  <span className="font-semibold text-gray-900">AJP</span>
                 </div>
                 <div>
                   <span className="text-gray-500 block">Especialidad</span>
@@ -279,7 +293,7 @@ export default function AJPDetail() {
         <div className="bg-gray-900 rounded-3xl p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">El resultado</h2>
           <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-            AJP Systems opera ahora con sistemas multiagenticos en proyectos críticos de energía renovable con la garantía de que cada acción de sus agentes es supervisada, auditada y trazable. Sus clientes del sector energético pueden verificar el cumplimiento normativo en cualquier momento.
+            AJP opera ahora con sistemas multiagenticos en proyectos críticos de energía renovable con la garantía de que cada acción de sus agentes es supervisada, auditada y trazable. Sus clientes del sector energético pueden verificar el cumplimiento normativo en cualquier momento.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             <div className="bg-white/10 rounded-xl p-6">

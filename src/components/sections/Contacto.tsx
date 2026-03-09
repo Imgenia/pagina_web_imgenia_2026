@@ -19,10 +19,10 @@ export default function Contacto() {
               Escríbenos directamente y te respondemos en menos de 24 horas.
             </p>
             <a
-              href="mailto:contacto@imgenia.com"
+              href="mailto:info@imgenia.es"
               className="inline-flex items-center gap-2 text-imgenia-blue font-medium hover:gap-3 transition-all"
             >
-              contacto@imgenia.com
+              info@imgenia.es
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -52,7 +52,7 @@ export default function Contacto() {
             Únete a ellas y descubre el poder de la IA aplicada a resultados reales.
           </p>
           <a
-            href="mailto:contacto@imgenia.com"
+            href="mailto:info@imgenia.es"
             className="inline-flex items-center gap-2 px-8 py-4 bg-imgenia-blue text-white font-semibold rounded-lg hover:bg-imgenia-navy transition-colors"
           >
             Comenzar ahora
