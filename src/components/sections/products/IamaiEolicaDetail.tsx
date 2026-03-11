@@ -1,6 +1,7 @@
 import { ArrowLeft, Clock, BarChart3, TrendingUp, Zap, Database, Shield, Wind } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImgeniaText from '../../ImgeniaText';
+import { LEAD_FORM_URL } from '../../../constants/cta';
 
 export default function IamaiEolicaDetail() {
   const impactos = [
@@ -241,7 +242,9 @@ export default function IamaiEolicaDetail() {
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">¿Tienes sistemas industriales que necesitan integrarse con IA?</p>
           <a
-            href="/#contacto"
+            href={LEAD_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-imgenia-navy text-white font-semibold rounded-xl hover:bg-imgenia-blue transition-colors"
           >
             Hablemos de tu caso

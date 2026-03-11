@@ -1,6 +1,7 @@
 import { ArrowLeft, CheckCircle2, XCircle, Users, Clock, Calendar, BarChart3, Zap, TrendingUp, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImgeniaText from '../../ImgeniaText';
+import { LEAD_FORM_URL } from '../../../constants/cta';
 
 export default function SdrIADetail() {
   const caracteristicas = [
@@ -397,13 +398,17 @@ export default function SdrIADetail() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:info@imgenia.es"
+              href={LEAD_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-imgenia-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               Solicitar Demo
             </a>
             <a
-              href="mailto:info@imgenia.es"
+              href={LEAD_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
               Hablar con Ventas

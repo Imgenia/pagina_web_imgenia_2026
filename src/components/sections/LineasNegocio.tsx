@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Section from '../Section';
+import { LEAD_FORM_URL } from '../../constants/cta';
 import { Users, GitBranch, Code, ShieldCheck, ArrowRight, Wind } from 'lucide-react';
 
 interface Caso {
@@ -40,7 +41,7 @@ export default function LineasNegocio() {
       subtitle: 'Gateway Multi-Proveedor LLM · RAG · Asistentes Técnicos',
       description: 'Plataforma unificada que conecta tu empresa con los mejores modelos del mercado (GPT, Claude, Gemini…) a través de un único gateway. Construye asistentes inteligentes con RAG sobre tu documentación interna, automatiza consultas técnicas repetitivas y despliega copilotos de negocio sin exponer tus datos.',
       featured: false,
-      link: '#contacto',
+      link: LEAD_FORM_URL,
       casos: [
         {
           nombre: 'Test My Bike',
@@ -58,7 +59,7 @@ export default function LineasNegocio() {
       subtitle: 'Soluciones IA Personalizadas',
       description: 'Desarrollo de sistemas de IA específicos para tu caso de uso. Desde la conceptualización hasta el despliegue en producción.',
       featured: false,
-      link: '#contacto',
+      link: LEAD_FORM_URL,
       casos: [
         {
           nombre: 'NORCI Logística',
@@ -90,7 +91,7 @@ export default function LineasNegocio() {
       subtitle: 'Compliance IA y Auditoría',
       description: 'Suite completa de herramientas para garantizar seguridad, privacidad y cumplimiento normativo en todos tus sistemas de IA.',
       featured: false,
-      link: '#contacto',
+      link: LEAD_FORM_URL,
       casos: [
         {
           nombre: 'AJP · Sector Energético',
@@ -179,6 +180,8 @@ export default function LineasNegocio() {
                   ) : (
                     <a
                       href={linea.link}
+                      target={linea.link.startsWith('http') ? '_blank' : undefined}
+                      rel={linea.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className={`inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 border-2 min-h-[44px] ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[2]} ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[0]} font-medium rounded-lg text-sm sm:text-base ${colorClasses[linea.color as keyof typeof colorClasses].split(' ')[3]} hover:text-white transition-all duration-300 group`}
                     >
                       Más información

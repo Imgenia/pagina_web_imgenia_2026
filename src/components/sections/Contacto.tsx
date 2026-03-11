@@ -1,6 +1,7 @@
 import Section from '../Section';
 import ImgeniaText from '../ImgeniaText';
 import { Mail, Calendar, ArrowRight } from 'lucide-react';
+import { LEAD_FORM_URL } from '../../constants/cta';
 
 export default function Contacto() {
   return (
@@ -34,7 +35,7 @@ export default function Contacto() {
               Reserva 30 minutos en nuestra agenda para una demo personalizada o una reunión.
             </p>
             <a
-              href="https://api.leadconnectorhq.com/widget/booking/yYn8SETZe0XujykkVF23"
+              href={LEAD_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-imgenia-pink font-medium hover:gap-3 transition-all text-sm sm:text-base min-h-[44px] items-center"
@@ -54,7 +55,9 @@ export default function Contacto() {
             Únete a ellas y descubre el poder de la IA aplicada a resultados reales.
           </p>
           <a
-            href="mailto:info@imgenia.es"
+            href={LEAD_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-imgenia-blue text-white font-semibold rounded-lg hover:bg-imgenia-navy transition-colors text-sm sm:text-base min-h-[44px]"
           >
             Comenzar ahora

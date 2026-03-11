@@ -1,6 +1,7 @@
 import { ArrowLeft, Clock, BarChart3, TrendingUp, Zap, Database, Shield, Users, Search, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ImgeniaText from '../../ImgeniaText';
+import { LEAD_FORM_URL } from '../../../constants/cta';
 
 export default function IncoTradingDetail() {
   const impactos = [
@@ -302,7 +303,9 @@ export default function IncoTradingDetail() {
         <div className="text-center">
           <p className="text-gray-600 mb-6">¿Tienes un proceso similar que automatizar?</p>
           <a
-            href="/#contacto"
+            href={LEAD_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-imgenia-blue text-white font-semibold rounded-xl hover:bg-imgenia-navy transition-colors"
           >
             Hablemos de tu caso

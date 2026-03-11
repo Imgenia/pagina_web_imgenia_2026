@@ -317,8 +317,14 @@ export function DossierDocument() {
             info@imgenia.es
           </Link>
           <Text style={[styles.body, { marginTop: 8 }]}>
-            Reserva una demo personalizada en nuestra web: imgenia.es
+            Dossier, demos y contacto comercial:
           </Text>
+          <Link
+            src="https://api.leadconnectorhq.com/widget/form/JbUsSJGFx3iRh4cYX3Bs"
+            style={styles.contactLink}
+          >
+            Formulario IMGENIA (Lead Connector)
+          </Link>
         </View>
 
         <View style={{ marginTop: 32, alignItems: 'center' }}>
