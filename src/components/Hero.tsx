@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { LEAD_FORM_URL } from '../constants/cta';
+import { DOSSIER_MEET_URL } from '../constants/cta';
 
 export default function Hero() {
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
         </p>
 
         <a
-          href={LEAD_FORM_URL}
+          href={DOSSIER_MEET_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center mt-6 sm:mt-8 px-3 py-1.5 sm:px-4 sm:py-2 border border-imgenia-blue/20 rounded-full hover:border-imgenia-blue hover:bg-imgenia-blue/5 transition-colors min-h-[44px]"
